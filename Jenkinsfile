@@ -5,17 +5,10 @@ currentBuild.displayName = "Final_Demo # "+currentBuild.number
         return tag
         }
         
-
-pipeline{
-        agent any  
-        environment{
-	    Docker_tag = getDockerTag()
-        }
-        
         stages{
 
 
-              stage('Quality Gate Statuc Check'){
+              stage('Quality Gate Statuc '){
 
                agent {
                 docker {
